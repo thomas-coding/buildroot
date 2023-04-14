@@ -22,3 +22,6 @@ BR2_TARGET_ROOTFS_CPIO=y
 
 # Add for dmsetup
 BR2_PACKAGE_LVM2=y
+
+# Add for kdump
+BR2_PACKAGE_KEXEC=y
