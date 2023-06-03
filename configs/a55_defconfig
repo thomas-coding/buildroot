@@ -58,7 +58,12 @@ BR2_PACKAGE_EXFATPROGS=y
 BR2_SYSTEM_DHCP="eth0"
 
 # Add ssh
+# After power on, set /etc/ssh/sshd_config PermitRootLogin yes, then reboot
+# ssh root@localhost -p 3522
+# scp -P 3522 build.sh root@localhost:/root/
 BR2_PACKAGE_OPENSSL=y
 BR2_PACKAGE_OPENSSH=y
 BR2_PACKAGE_OPENSSH_CLIENT=y
 BR2_PACKAGE_OPENSSH_SERVER=y
+BR2_PACKAGE_HOST_MKPASSWD=y
+BR2_TARGET_GENERIC_ROOT_PASSWD="root"
